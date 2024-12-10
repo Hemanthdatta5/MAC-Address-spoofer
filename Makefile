@@ -1,4 +1,4 @@
-BUILD=dist
+DIST=dist
 
 all: program extra
 
@@ -6,13 +6,14 @@ program: build
 	pyinstaller ./*.py
 
 extra: build
-	cp LICENSE $(BUILD)/
-	cp docs $(BUILD)/
+	cp LICENSE $(DIST)/
+	cp docs $(DIST)/
 
 build:
-	mkdir -p $(BUILD)
+	mkdir -p $(DIST)
 
 clean:
-	rm -rf $(BUILD)/*
+	rm -rf $(DIST)/*
+	pyinstaller --clean
 
 .PHONY: build clean
