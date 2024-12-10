@@ -36,5 +36,7 @@ if __name__ == "__main__":
     temp_file = '/tmp/mac-address-spoofer-' + ''.join(choice(ascii_letters) for i in range(10)) + '.cap'
     print(temp_file)
 
-    # gen_cap(temp_file, )
+    gen_cap(temp_file, args.target)
+
+    subprocess.call(["sudo", "bettercap", "--iface", "eth0", "--caplet", temp_file])
         
