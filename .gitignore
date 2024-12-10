@@ -1,3 +1,4 @@
 .vs
 .venv
 .mypy_cache
+dist
