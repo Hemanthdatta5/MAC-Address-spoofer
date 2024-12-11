@@ -7,7 +7,6 @@ program: build
 
 extra: build
 	cp LICENSE $(DIST)/
-	cp docs $(DIST)/
 
 build:
 	mkdir -p $(DIST)
